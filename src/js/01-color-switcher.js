@@ -7,12 +7,12 @@ startButton.addEventListener('click', startColorSwitching);
 stopButton.addEventListener('click', stopColorSwitching);
 
 function startColorSwitching() {
-  startButton.disabled = true; // вимкнути кнопку "Start"
+  startButton.disabled = true;
   intervalId = setInterval(changeBackgroundColor, 1000);
 }
 
 function stopColorSwitching() {
-  startButton.disabled = false; // увімкнути кнопку "Start"
+  startButton.disabled = false;
   clearInterval(intervalId);
 }
 
@@ -26,3 +26,4 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, '0')}`;
 }
+
