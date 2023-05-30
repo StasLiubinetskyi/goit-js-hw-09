@@ -29,10 +29,12 @@ const options = {
 
 flatpickr(datePicker, options);
 
+startButton.disabled = true;
+
 startButton.addEventListener('click', startCountdown);
 
 function startCountdown() {
-  const selectedDate = flatpickr.parseDate(datePicker.value);
+  const selectedDate = new Date(datePicker.value);
   const currentDate = new Date();
 
   const timeRemaining = selectedDate - currentDate;
@@ -49,7 +51,7 @@ function startCountdown() {
 }
 
 function updateCountdown() {
-  const selectedDate = flatpickr.parseDate(datePicker.value);
+  const selectedDate = new Date(datePicker.value);
   const currentDate = new Date();
   const timeRemaining = selectedDate - currentDate;
 
