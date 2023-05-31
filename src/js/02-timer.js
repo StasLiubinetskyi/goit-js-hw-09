@@ -48,6 +48,7 @@ function startCountdown() {
 
   updateCountdown();
   startButton.disabled = true;
+  datePicker.disabled = true; // Деактивувати інпут календаря
 }
 
 function updateCountdown() {
@@ -75,6 +76,7 @@ function resetCountdown() {
   minutesElement.textContent = '00';
   secondsElement.textContent = '00';
   startButton.disabled = false;
+  datePicker.disabled = false; // Активувати інпут календаря
 }
 
 function convertMs(ms) {

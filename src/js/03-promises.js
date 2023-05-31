@@ -42,4 +42,10 @@ form.addEventListener('submit', function (event) {
 
     delay += step;
   }
+
+  resetForm();
 });
+
+function resetForm() {
+  form.reset();
+}
